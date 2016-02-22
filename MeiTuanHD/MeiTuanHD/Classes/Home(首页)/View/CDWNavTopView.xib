@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CDWNavTopView">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bUB-0K-xab" customClass="CDWNavTopView">
+                    <rect key="frame" x="10" y="0.0" width="1" height="40"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="S68-gW-riv"/>
+                        <constraint firstAttribute="width" constant="1" id="wfF-1S-1Yj"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuD-2Z-qFy">
+                    <rect key="frame" x="71" y="0.0" width="30" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="bX2-7Y-ROa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="子标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uat-gJ-dr1">
+                    <rect key="frame" x="71" y="25" width="36" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgw-4h-2ep">
+                    <rect key="frame" x="0.0" y="0.0" width="160" height="40"/>
+                    <inset key="imageEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" image="icon_map"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="CuD-2Z-qFy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7fg-VM-VgP"/>
+                <constraint firstAttribute="trailing" secondItem="pgw-4h-2ep" secondAttribute="trailing" id="8dI-mW-DPP"/>
+                <constraint firstAttribute="bottom" secondItem="pgw-4h-2ep" secondAttribute="bottom" id="Nhj-vm-dkk"/>
+                <constraint firstItem="bUB-0K-xab" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OVf-05-QTS"/>
+                <constraint firstItem="uat-gJ-dr1" firstAttribute="leading" secondItem="bUB-0K-xab" secondAttribute="trailing" constant="60" id="SAV-oV-yPi"/>
+                <constraint firstItem="CuD-2Z-qFy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ca8-VV-c7W"/>
+                <constraint firstItem="pgw-4h-2ep" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hf3-xt-p1m"/>
+                <constraint firstItem="CuD-2Z-qFy" firstAttribute="leading" secondItem="bUB-0K-xab" secondAttribute="trailing" constant="60" id="hvV-VO-P6X"/>
+                <constraint firstAttribute="bottom" secondItem="uat-gJ-dr1" secondAttribute="bottom" id="pk5-4l-D9Y"/>
+                <constraint firstItem="bUB-0K-xab" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="vCp-bL-8UZ"/>
+                <constraint firstItem="pgw-4h-2ep" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xhE-D9-q90"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="button" destination="pgw-4h-2ep" id="LOI-ZF-47V"/>
+            </connections>
+            <point key="canvasLocation" x="264" y="117"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_map" width="30" height="30"/>
+    </resources>
+</document>
