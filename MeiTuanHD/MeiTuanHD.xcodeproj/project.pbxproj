@@ -23,6 +23,11 @@
 		19DE904C1C7B4DE500C1E4EF /* CDWNavTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19DE904B1C7B4DE500C1E4EF /* CDWNavTopView.xib */; };
 		19DE904F1C7B518100C1E4EF /* CDWNavTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DE904E1C7B518100C1E4EF /* CDWNavTopView.m */; };
 		19DE90521C7B5D8A00C1E4EF /* CDWCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DE90511C7B5D8A00C1E4EF /* CDWCategoryController.m */; };
+		19DE90541C7B608A00C1E4EF /* CDWDropdownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19DE90531C7B608A00C1E4EF /* CDWDropdownView.xib */; };
+		19DE90571C7B60AF00C1E4EF /* CDWDropdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DE90561C7B60AF00C1E4EF /* CDWDropdownView.m */; };
+		19DE905A1C7B658E00C1E4EF /* CDWCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DE90591C7B658E00C1E4EF /* CDWCategoryModel.m */; };
+		19DE905D1C7B718600C1E4EF /* CDWLeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DE905C1C7B718600C1E4EF /* CDWLeftTableViewCell.m */; };
+		19DE90601C7B719600C1E4EF /* CDWRightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DE905F1C7B719600C1E4EF /* CDWRightTableViewCell.m */; };
 		B73401AC69A6A217E077285C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC0C8125A99225F1D3605C1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +60,15 @@
 		19DE904E1C7B518100C1E4EF /* CDWNavTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDWNavTopView.m; sourceTree = "<group>"; };
 		19DE90501C7B5D8A00C1E4EF /* CDWCategoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDWCategoryController.h; sourceTree = "<group>"; };
 		19DE90511C7B5D8A00C1E4EF /* CDWCategoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDWCategoryController.m; sourceTree = "<group>"; };
+		19DE90531C7B608A00C1E4EF /* CDWDropdownView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDWDropdownView.xib; sourceTree = "<group>"; };
+		19DE90551C7B60AF00C1E4EF /* CDWDropdownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDWDropdownView.h; sourceTree = "<group>"; };
+		19DE90561C7B60AF00C1E4EF /* CDWDropdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDWDropdownView.m; sourceTree = "<group>"; };
+		19DE90581C7B658E00C1E4EF /* CDWCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDWCategoryModel.h; sourceTree = "<group>"; };
+		19DE90591C7B658E00C1E4EF /* CDWCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDWCategoryModel.m; sourceTree = "<group>"; };
+		19DE905B1C7B718600C1E4EF /* CDWLeftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDWLeftTableViewCell.h; sourceTree = "<group>"; };
+		19DE905C1C7B718600C1E4EF /* CDWLeftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDWLeftTableViewCell.m; sourceTree = "<group>"; };
+		19DE905E1C7B719600C1E4EF /* CDWRightTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDWRightTableViewCell.h; sourceTree = "<group>"; };
+		19DE905F1C7B719600C1E4EF /* CDWRightTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDWRightTableViewCell.m; sourceTree = "<group>"; };
 		2CC0C8125A99225F1D3605C1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD1CFF211A1FB6543304A0A7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +118,8 @@
 		1900F17B1C7AD40A00129ECC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				19DE90581C7B658E00C1E4EF /* CDWCategoryModel.h */,
+				19DE90591C7B658E00C1E4EF /* CDWCategoryModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,9 +127,16 @@
 		1900F17C1C7AD40A00129ECC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				19DE90531C7B608A00C1E4EF /* CDWDropdownView.xib */,
+				19DE90551C7B60AF00C1E4EF /* CDWDropdownView.h */,
+				19DE90561C7B60AF00C1E4EF /* CDWDropdownView.m */,
+				19DE905B1C7B718600C1E4EF /* CDWLeftTableViewCell.h */,
+				19DE905C1C7B718600C1E4EF /* CDWLeftTableViewCell.m */,
+				19DE905E1C7B719600C1E4EF /* CDWRightTableViewCell.h */,
+				19DE905F1C7B719600C1E4EF /* CDWRightTableViewCell.m */,
+				19DE904B1C7B4DE500C1E4EF /* CDWNavTopView.xib */,
 				19DE904D1C7B518100C1E4EF /* CDWNavTopView.h */,
 				19DE904E1C7B518100C1E4EF /* CDWNavTopView.m */,
-				19DE904B1C7B4DE500C1E4EF /* CDWNavTopView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -307,6 +330,7 @@
 			files = (
 				1900F1941C7AD7B100129ECC /* sorts.plist in Resources */,
 				1900F1931C7AD7B100129ECC /* cityGroups.plist in Resources */,
+				19DE90541C7B608A00C1E4EF /* CDWDropdownView.xib in Resources */,
 				198632F61C79A280009EFEA5 /* LaunchScreen.storyboard in Resources */,
 				198632F31C79A280009EFEA5 /* Assets.xcassets in Resources */,
 				1900F1911C7AD7B100129ECC /* categories.plist in Resources */,
@@ -370,12 +394,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19DE90601C7B719600C1E4EF /* CDWRightTableViewCell.m in Sources */,
 				19DE90521C7B5D8A00C1E4EF /* CDWCategoryController.m in Sources */,
+				19DE905D1C7B718600C1E4EF /* CDWLeftTableViewCell.m in Sources */,
 				1900F1981C7ADCE800129ECC /* CDWCounst.m in Sources */,
 				19DE90471C7AE19500C1E4EF /* UIView+HMCategory.m in Sources */,
 				19DE904A1C7AE1D500C1E4EF /* UIBarButtonItem+CDWCategory.m in Sources */,
 				19DE904F1C7B518100C1E4EF /* CDWNavTopView.m in Sources */,
 				1900F1851C7AD40A00129ECC /* AppDelegate.m in Sources */,
+				19DE90571C7B60AF00C1E4EF /* CDWDropdownView.m in Sources */,
+				19DE905A1C7B658E00C1E4EF /* CDWCategoryModel.m in Sources */,
 				198632E81C79A280009EFEA5 /* main.m in Sources */,
 				1900F18B1C7AD47600129ECC /* CDWMainCollectionViewController.m in Sources */,
 				1900F1881C7AD45800129ECC /* CDWNavigationViewController.m in Sources */,

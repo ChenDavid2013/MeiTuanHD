@@ -7,6 +7,8 @@
 //
 
 #import "CDWCategoryController.h"
+#import "CDWDropdownView.h"
+#import "CDWCategoryModel.h"
 
 @interface CDWCategoryController ()
 
@@ -17,6 +19,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    CDWDropdownView *dropdownView = [CDWDropdownView dropdownView];
+    
+    [self.view addSubview:dropdownView];
+    
+    self.preferredContentSize = dropdownView.size;
+    
+    dropdownView.categoryArray = [CDWCategoryModel mj_objectArrayWithFilename:@"categories.plist"];
 }
 
 - (void)didReceiveMemoryWarning {
