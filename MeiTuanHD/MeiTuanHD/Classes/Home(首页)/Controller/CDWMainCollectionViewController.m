@@ -9,10 +9,13 @@
 #import "CDWMainCollectionViewController.h"
 #import "CDWNavTopView.h"
 #import "CDWCategoryController.h"
+#import "CDWDistrictController.h"
 
 @interface CDWMainCollectionViewController ()
 
-@property (nonatomic, weak)UIBarButtonItem *categoryItem;
+@property (nonatomic, weak) UIBarButtonItem *categoryItem;
+@property (nonatomic, weak) UIBarButtonItem *districtItem;
+@property (nonatomic, weak) UIBarButtonItem *sortItem;
 
 @end
 
@@ -48,7 +51,7 @@ static NSString * const reuseIdentifier = @"Cell";
     // Do any additional setup after loading the view.
 }
 
-
+#pragma mark --导航栏左边按钮的是创建
 - (void)setNavigationLeft {
     UIBarButtonItem *meiTuanItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_meituan_logo"] style:UIBarButtonItemStyleDone target:nil action:nil];
     meiTuanItem.enabled = NO;
@@ -60,14 +63,16 @@ static NSString * const reuseIdentifier = @"Cell";
     
     CDWNavTopView *districtView = [CDWNavTopView navTopView];
     UIBarButtonItem *districtItem = [[UIBarButtonItem alloc] initWithCustomView:districtView];
+    self.districtItem = districtItem;
+    [districtView addTarget:self andAction:@selector(districtItemClick)];
     
     CDWNavTopView *sortView = [CDWNavTopView navTopView];
     UIBarButtonItem *sortItem = [[UIBarButtonItem alloc] initWithCustomView:sortView];
 
-    
     self.navigationItem.leftBarButtonItems = @[meiTuanItem, categoryItem, districtItem, sortItem];
 }
 
+#pragma mark --导航栏右边的创建
 - (void)setNavigationRight {
     
     UIBarButtonItem *searchItem = [UIBarButtonItem barButtonItemAddTarget:self action:@selector(searchItemClick) icon:@"icon_search" andHLIcon:@"icon_search_highlighted"];
@@ -79,22 +84,34 @@ static NSString * const reuseIdentifier = @"Cell";
     self.navigationItem.rightBarButtonItems = @[mapItem, searchItem];
     
 }
-#pragma mark navigationBar的item点击事件;
+
+#pragma mark --搜索item点击事件
 - (void)searchItemClick {
     
     NSLog(@"搜索");
 }
-
+#pragma mark --地图item点击事件
 - (void)mapItemClick {
     
     NSLog(@"地图");
 }
-
+#pragma mark --分类item点击事件
 - (void)categoryItemClick {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
     
     UIPopoverController *categoryPopoverC = [[UIPopoverController alloc] initWithContentViewController:[[CDWCategoryController alloc] init]];
     
     [categoryPopoverC presentPopoverFromBarButtonItem:self.categoryItem permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+}
+#pragma mark --区域item点击事件
+- (void)districtItemClick {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    UIPopoverController *districtPopoverC = [[UIPopoverController alloc] initWithContentViewController:[[CDWDistrictController alloc] init]];
+    
+    [districtPopoverC presentPopoverFromBarButtonItem:self.districtItem permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 }
 
 @end

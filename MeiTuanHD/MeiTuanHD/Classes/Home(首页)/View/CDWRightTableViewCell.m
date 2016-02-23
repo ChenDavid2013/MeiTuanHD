@@ -17,6 +17,8 @@
     cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_dropdown_rightpart"]];
     cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_dropdown_right_selected"]];
     
+    cell.textLabel.backgroundColor = [UIColor clearColor];
+    
     return cell;
 }
 

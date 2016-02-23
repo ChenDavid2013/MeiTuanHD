@@ -18,6 +18,10 @@
 		198632E81C79A280009EFEA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 198632E71C79A280009EFEA5 /* main.m */; };
 		198632F31C79A280009EFEA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 198632F21C79A280009EFEA5 /* Assets.xcassets */; };
 		198632F61C79A280009EFEA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198632F41C79A280009EFEA5 /* LaunchScreen.storyboard */; };
+		19D49AD31C7C7138003A886D /* CDWDistrictController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D49AD11C7C7138003A886D /* CDWDistrictController.m */; };
+		19D49AD41C7C7138003A886D /* CDWDistrictController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19D49AD21C7C7138003A886D /* CDWDistrictController.xib */; };
+		19D49ADD1C7C80D4003A886D /* CDWCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D49ADB1C7C80D4003A886D /* CDWCityViewController.m */; };
+		19D49ADE1C7C80D4003A886D /* CDWCityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19D49ADC1C7C80D4003A886D /* CDWCityViewController.xib */; };
 		19DE90471C7AE19500C1E4EF /* UIView+HMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DE90461C7AE19500C1E4EF /* UIView+HMCategory.m */; };
 		19DE904A1C7AE1D500C1E4EF /* UIBarButtonItem+CDWCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DE90491C7AE1D500C1E4EF /* UIBarButtonItem+CDWCategory.m */; };
 		19DE904C1C7B4DE500C1E4EF /* CDWNavTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19DE904B1C7B4DE500C1E4EF /* CDWNavTopView.xib */; };
@@ -51,6 +55,12 @@
 		198632F21C79A280009EFEA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		198632F51C79A280009EFEA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		198632F71C79A280009EFEA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19D49AD01C7C7138003A886D /* CDWDistrictController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDWDistrictController.h; sourceTree = "<group>"; };
+		19D49AD11C7C7138003A886D /* CDWDistrictController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDWDistrictController.m; sourceTree = "<group>"; };
+		19D49AD21C7C7138003A886D /* CDWDistrictController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDWDistrictController.xib; sourceTree = "<group>"; };
+		19D49ADA1C7C80D4003A886D /* CDWCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDWCityViewController.h; sourceTree = "<group>"; };
+		19D49ADB1C7C80D4003A886D /* CDWCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDWCityViewController.m; sourceTree = "<group>"; };
+		19D49ADC1C7C80D4003A886D /* CDWCityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDWCityViewController.xib; sourceTree = "<group>"; };
 		19DE90451C7AE19500C1E4EF /* UIView+HMCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HMCategory.h"; sourceTree = "<group>"; };
 		19DE90461C7AE19500C1E4EF /* UIView+HMCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HMCategory.m"; sourceTree = "<group>"; };
 		19DE90481C7AE1D500C1E4EF /* UIBarButtonItem+CDWCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+CDWCategory.h"; sourceTree = "<group>"; };
@@ -111,6 +121,12 @@
 				1900F18A1C7AD47600129ECC /* CDWMainCollectionViewController.m */,
 				19DE90501C7B5D8A00C1E4EF /* CDWCategoryController.h */,
 				19DE90511C7B5D8A00C1E4EF /* CDWCategoryController.m */,
+				19D49AD01C7C7138003A886D /* CDWDistrictController.h */,
+				19D49AD11C7C7138003A886D /* CDWDistrictController.m */,
+				19D49AD21C7C7138003A886D /* CDWDistrictController.xib */,
+				19D49ADA1C7C80D4003A886D /* CDWCityViewController.h */,
+				19D49ADB1C7C80D4003A886D /* CDWCityViewController.m */,
+				19D49ADC1C7C80D4003A886D /* CDWCityViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -328,10 +344,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19D49ADE1C7C80D4003A886D /* CDWCityViewController.xib in Resources */,
 				1900F1941C7AD7B100129ECC /* sorts.plist in Resources */,
 				1900F1931C7AD7B100129ECC /* cityGroups.plist in Resources */,
 				19DE90541C7B608A00C1E4EF /* CDWDropdownView.xib in Resources */,
 				198632F61C79A280009EFEA5 /* LaunchScreen.storyboard in Resources */,
+				19D49AD41C7C7138003A886D /* CDWDistrictController.xib in Resources */,
 				198632F31C79A280009EFEA5 /* Assets.xcassets in Resources */,
 				1900F1911C7AD7B100129ECC /* categories.plist in Resources */,
 				1900F1921C7AD7B100129ECC /* cities.plist in Resources */,
@@ -400,12 +418,14 @@
 				1900F1981C7ADCE800129ECC /* CDWCounst.m in Sources */,
 				19DE90471C7AE19500C1E4EF /* UIView+HMCategory.m in Sources */,
 				19DE904A1C7AE1D500C1E4EF /* UIBarButtonItem+CDWCategory.m in Sources */,
+				19D49AD31C7C7138003A886D /* CDWDistrictController.m in Sources */,
 				19DE904F1C7B518100C1E4EF /* CDWNavTopView.m in Sources */,
 				1900F1851C7AD40A00129ECC /* AppDelegate.m in Sources */,
 				19DE90571C7B60AF00C1E4EF /* CDWDropdownView.m in Sources */,
 				19DE905A1C7B658E00C1E4EF /* CDWCategoryModel.m in Sources */,
 				198632E81C79A280009EFEA5 /* main.m in Sources */,
 				1900F18B1C7AD47600129ECC /* CDWMainCollectionViewController.m in Sources */,
+				19D49ADD1C7C80D4003A886D /* CDWCityViewController.m in Sources */,
 				1900F1881C7AD45800129ECC /* CDWNavigationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

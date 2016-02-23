@@ -10,6 +10,8 @@
 
 @interface CDWLeftTableViewCell : UITableViewCell
 
-+ (instancetype)leftTableViewCellWithTableView:(UITableView *)tableView identifier:(NSString *)identifier andIndexPath:(NSIndexPath *)indexPath;
+//+ (instancetype)leftTableViewCellWithTableView:(UITableView *)tableView identifier:(NSString *)identifier andIndexPath:(NSIndexPath *)indexPath;
+
++ (instancetype)leftTableViewCellWithTableView:(UITableView *)tableView;
 
 @end

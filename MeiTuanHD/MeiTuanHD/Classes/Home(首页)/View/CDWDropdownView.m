@@ -19,7 +19,7 @@
 
 @end
 
-static NSString *leftCell = @"leftCell";
+//static NSString *leftCell = @"leftCell";
 static NSString *rightCell = @"rightCell";
 
 @implementation CDWDropdownView
@@ -33,7 +33,7 @@ static NSString *rightCell = @"rightCell";
     
     self.autoresizingMask = UIViewAutoresizingNone;
     
-    [self.leftTableView registerClass:[CDWLeftTableViewCell class] forCellReuseIdentifier:leftCell];
+//    [self.leftTableView registerClass:[CDWLeftTableViewCell class] forCellReuseIdentifier:leftCell];
     [self.rightTableView registerClass:[CDWRightTableViewCell class] forCellReuseIdentifier:rightCell];
 }
 
@@ -54,7 +54,9 @@ static NSString *rightCell = @"rightCell";
     
     if (tableView == self.leftTableView) {
         
-        cell = [CDWLeftTableViewCell leftTableViewCellWithTableView:tableView identifier:leftCell andIndexPath:indexPath];
+//        cell = [CDWLeftTableViewCell leftTableViewCellWithTableView:tableView identifier:leftCell andIndexPath:indexPath];
+        
+        cell = [CDWLeftTableViewCell leftTableViewCellWithTableView:tableView];
         
         CDWCategoryModel *categoryModel = self.categoryArray[indexPath.row];
         
@@ -72,7 +74,7 @@ static NSString *rightCell = @"rightCell";
     }else {
         
         cell = [CDWRightTableViewCell rightTableViewCellWithTableView:tableView identifier:rightCell andIndexPath:indexPath];
-                
+        
         cell.textLabel.text = self.selectedCategoryModel.subcategories[indexPath.row];
         
     }

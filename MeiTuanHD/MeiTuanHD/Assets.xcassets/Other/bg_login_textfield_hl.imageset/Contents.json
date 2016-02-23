@@ -1,22 +1,23 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
-      "scale" : "1x",
       "resizing" : {
         "mode" : "9-part",
         "center" : {
           "mode" : "tile",
-          "width" : 0,
-          "height" : 0
+          "width" : 1,
+          "height" : 1
         },
         "cap-insets" : {
-          "bottom" : 0,
-          "top" : 0,
-          "right" : 0,
-          "left" : 0
+          "bottom" : 4,
+          "top" : 4,
+          "right" : 4,
+          "left" : 4
         }
-      }
+      },
+      "idiom" : "universal",
+      "filename" : "bg_login_textfield_hl.png",
+      "scale" : "1x"
     },
     {
       "resizing" : {
@@ -27,14 +28,14 @@
           "height" : 1
         },
         "cap-insets" : {
-          "bottom" : 3,
-          "top" : 2,
-          "right" : 82,
-          "left" : 81
+          "bottom" : 8,
+          "top" : 8,
+          "right" : 8,
+          "left" : 8
         }
       },
       "idiom" : "universal",
-      "filename" : "bg_dropdown_left_selected@2x.png",
+      "filename" : "bg_login_textfield_hl@2x.png",
       "scale" : "2x"
     },
     {

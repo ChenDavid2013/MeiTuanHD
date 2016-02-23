@@ -10,13 +10,30 @@
 
 @implementation CDWLeftTableViewCell
 
-+ (instancetype)leftTableViewCellWithTableView:(UITableView *)tableView identifier:(NSString *)identifier andIndexPath:(NSIndexPath *)indexPath {
+//+ (instancetype)leftTableViewCellWithTableView:(UITableView *)tableView identifier:(NSString *)identifier andIndexPath:(NSIndexPath *)indexPath {
+//
+//   CDWLeftTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+//
+//    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"btn_filter_selected"]];
+//    cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_dropdown_left_selected"]];
+//
+//    return cell;
+//}
+
++ (instancetype)leftTableViewCellWithTableView:(UITableView *)tableView {
     
-   CDWLeftTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    static NSString *leftCell = @"leftCell";
     
-    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_dropdown_leftpart"]];
-    cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_dropdown_left_selected"]];
+    CDWLeftTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:leftCell];
+    
+    if (cell == nil) {
+        cell = [[self alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:leftCell];
+        
+        cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_dropdown_leftpart"]];
+        cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_dropdown_left_selected"]];
+    }
     
     return cell;
+    
 }
 @end
