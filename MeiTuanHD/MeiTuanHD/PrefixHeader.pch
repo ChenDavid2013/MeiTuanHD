@@ -17,5 +17,6 @@
 
 
 #import <MJExtension.h>
+#import <Masonry.h>
 
 #endif /* PrefixHeader_pch */

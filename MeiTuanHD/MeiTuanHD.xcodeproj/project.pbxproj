@@ -18,6 +18,10 @@
 		198632E81C79A280009EFEA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 198632E71C79A280009EFEA5 /* main.m */; };
 		198632F31C79A280009EFEA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 198632F21C79A280009EFEA5 /* Assets.xcassets */; };
 		198632F61C79A280009EFEA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198632F41C79A280009EFEA5 /* LaunchScreen.storyboard */; };
+		19C5E6091C7D692D0073700D /* CDWCityGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C5E6081C7D692D0073700D /* CDWCityGroupModel.m */; };
+		19C5E60C1C7D6DC80073700D /* CDWCitySearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C5E60B1C7D6DC80073700D /* CDWCitySearchViewController.m */; };
+		19C5E60F1C7D7B410073700D /* CDWCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C5E60E1C7D7B410073700D /* CDWCityModel.m */; };
+		19C5E6121C7D7B5E0073700D /* CDWDistrictModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C5E6111C7D7B5E0073700D /* CDWDistrictModel.m */; };
 		19D49AD31C7C7138003A886D /* CDWDistrictController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D49AD11C7C7138003A886D /* CDWDistrictController.m */; };
 		19D49AD41C7C7138003A886D /* CDWDistrictController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19D49AD21C7C7138003A886D /* CDWDistrictController.xib */; };
 		19D49ADD1C7C80D4003A886D /* CDWCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D49ADB1C7C80D4003A886D /* CDWCityViewController.m */; };
@@ -55,6 +59,14 @@
 		198632F21C79A280009EFEA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		198632F51C79A280009EFEA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		198632F71C79A280009EFEA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19C5E6071C7D692D0073700D /* CDWCityGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDWCityGroupModel.h; sourceTree = "<group>"; };
+		19C5E6081C7D692D0073700D /* CDWCityGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDWCityGroupModel.m; sourceTree = "<group>"; };
+		19C5E60A1C7D6DC80073700D /* CDWCitySearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDWCitySearchViewController.h; sourceTree = "<group>"; };
+		19C5E60B1C7D6DC80073700D /* CDWCitySearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDWCitySearchViewController.m; sourceTree = "<group>"; };
+		19C5E60D1C7D7B410073700D /* CDWCityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDWCityModel.h; sourceTree = "<group>"; };
+		19C5E60E1C7D7B410073700D /* CDWCityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDWCityModel.m; sourceTree = "<group>"; };
+		19C5E6101C7D7B5E0073700D /* CDWDistrictModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDWDistrictModel.h; sourceTree = "<group>"; };
+		19C5E6111C7D7B5E0073700D /* CDWDistrictModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDWDistrictModel.m; sourceTree = "<group>"; };
 		19D49AD01C7C7138003A886D /* CDWDistrictController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDWDistrictController.h; sourceTree = "<group>"; };
 		19D49AD11C7C7138003A886D /* CDWDistrictController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDWDistrictController.m; sourceTree = "<group>"; };
 		19D49AD21C7C7138003A886D /* CDWDistrictController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDWDistrictController.xib; sourceTree = "<group>"; };
@@ -127,6 +139,8 @@
 				19D49ADA1C7C80D4003A886D /* CDWCityViewController.h */,
 				19D49ADB1C7C80D4003A886D /* CDWCityViewController.m */,
 				19D49ADC1C7C80D4003A886D /* CDWCityViewController.xib */,
+				19C5E60A1C7D6DC80073700D /* CDWCitySearchViewController.h */,
+				19C5E60B1C7D6DC80073700D /* CDWCitySearchViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -136,6 +150,12 @@
 			children = (
 				19DE90581C7B658E00C1E4EF /* CDWCategoryModel.h */,
 				19DE90591C7B658E00C1E4EF /* CDWCategoryModel.m */,
+				19C5E6071C7D692D0073700D /* CDWCityGroupModel.h */,
+				19C5E6081C7D692D0073700D /* CDWCityGroupModel.m */,
+				19C5E60D1C7D7B410073700D /* CDWCityModel.h */,
+				19C5E60E1C7D7B410073700D /* CDWCityModel.m */,
+				19C5E6101C7D7B5E0073700D /* CDWDistrictModel.h */,
+				19C5E6111C7D7B5E0073700D /* CDWDistrictModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -412,9 +432,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19C5E6121C7D7B5E0073700D /* CDWDistrictModel.m in Sources */,
 				19DE90601C7B719600C1E4EF /* CDWRightTableViewCell.m in Sources */,
 				19DE90521C7B5D8A00C1E4EF /* CDWCategoryController.m in Sources */,
 				19DE905D1C7B718600C1E4EF /* CDWLeftTableViewCell.m in Sources */,
+				19C5E6091C7D692D0073700D /* CDWCityGroupModel.m in Sources */,
 				1900F1981C7ADCE800129ECC /* CDWCounst.m in Sources */,
 				19DE90471C7AE19500C1E4EF /* UIView+HMCategory.m in Sources */,
 				19DE904A1C7AE1D500C1E4EF /* UIBarButtonItem+CDWCategory.m in Sources */,
@@ -424,9 +446,11 @@
 				19DE90571C7B60AF00C1E4EF /* CDWDropdownView.m in Sources */,
 				19DE905A1C7B658E00C1E4EF /* CDWCategoryModel.m in Sources */,
 				198632E81C79A280009EFEA5 /* main.m in Sources */,
+				19C5E60C1C7D6DC80073700D /* CDWCitySearchViewController.m in Sources */,
 				1900F18B1C7AD47600129ECC /* CDWMainCollectionViewController.m in Sources */,
 				19D49ADD1C7C80D4003A886D /* CDWCityViewController.m in Sources */,
 				1900F1881C7AD45800129ECC /* CDWNavigationViewController.m in Sources */,
+				19C5E60F1C7D7B410073700D /* CDWCityModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

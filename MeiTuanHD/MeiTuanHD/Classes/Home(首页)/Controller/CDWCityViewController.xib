@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CDWCityViewController">
             <connections>
+                <outlet property="coverButton" destination="Ly2-V1-iTK" id="7IL-nK-mfa"/>
                 <outlet property="searchBar" destination="oEy-KS-wZL" id="RhI-j2-3hn"/>
                 <outlet property="tableView" destination="05m-Oz-KwS" id="koT-OL-qLr"/>
                 <outlet property="view" destination="R45-Xn-DIb" id="SZg-6l-qUG"/>
@@ -25,8 +26,21 @@
                         <outlet property="delegate" destination="-1" id="HIB-5n-nuc"/>
                     </connections>
                 </tableView>
-                <searchBar contentMode="redraw" placeholder="请输入你要输入的城市" backgroundImage="bg_login_textfield" translatesAutoresizingMaskIntoConstraints="NO" id="oEy-KS-wZL">
-                    <rect key="frame" x="10" y="10" width="580" height="44"/>
+                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ly2-V1-iTK">
+                    <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="coverButtonClick" destination="-1" eventType="touchUpInside" id="qQQ-te-SN8"/>
+                    </connections>
+                </button>
+                <searchBar contentMode="redraw" misplaced="YES" placeholder="请输入你要输入的城市" backgroundImage="bg_login_textfield" translatesAutoresizingMaskIntoConstraints="NO" id="oEy-KS-wZL">
+                    <rect key="frame" x="10" y="8" width="580" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="KWE-nZ-gln"/>
+                    </constraints>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="WAv-kR-gPv"/>
@@ -35,15 +49,19 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="Ly2-V1-iTK" firstAttribute="leading" secondItem="R45-Xn-DIb" secondAttribute="leading" id="4Bh-YR-B2I"/>
+                <constraint firstAttribute="bottom" secondItem="Ly2-V1-iTK" secondAttribute="bottom" id="72b-Tr-SBv"/>
                 <constraint firstItem="05m-Oz-KwS" firstAttribute="top" secondItem="oEy-KS-wZL" secondAttribute="bottom" constant="10" id="9fh-r8-k6x"/>
                 <constraint firstAttribute="bottom" secondItem="05m-Oz-KwS" secondAttribute="bottom" id="ASN-Io-ppe"/>
                 <constraint firstItem="oEy-KS-wZL" firstAttribute="top" secondItem="R45-Xn-DIb" secondAttribute="top" constant="10" id="C1t-eM-gYo"/>
                 <constraint firstItem="05m-Oz-KwS" firstAttribute="leading" secondItem="R45-Xn-DIb" secondAttribute="leading" id="IPj-qI-vrp"/>
                 <constraint firstItem="oEy-KS-wZL" firstAttribute="leading" secondItem="R45-Xn-DIb" secondAttribute="leading" constant="10" id="Lqq-5S-rJn"/>
+                <constraint firstItem="Ly2-V1-iTK" firstAttribute="top" secondItem="oEy-KS-wZL" secondAttribute="bottom" constant="10" id="bIm-X9-WfN"/>
                 <constraint firstAttribute="trailing" secondItem="05m-Oz-KwS" secondAttribute="trailing" id="daq-NG-pRX"/>
                 <constraint firstAttribute="trailing" secondItem="oEy-KS-wZL" secondAttribute="trailing" constant="10" id="hba-T6-foL"/>
+                <constraint firstAttribute="trailing" secondItem="Ly2-V1-iTK" secondAttribute="trailing" id="hdY-I9-lNU"/>
             </constraints>
-            <point key="canvasLocation" x="66" y="-824"/>
+            <point key="canvasLocation" x="276" y="-886"/>
         </view>
     </objects>
     <resources>

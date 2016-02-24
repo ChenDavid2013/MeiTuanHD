@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) NSArray *categoryArray;
 
+@property (nonatomic, strong) NSArray *districtArray;
+
 + (instancetype)dropdownView;
 
 @end

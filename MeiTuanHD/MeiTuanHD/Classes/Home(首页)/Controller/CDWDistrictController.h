@@ -10,4 +10,6 @@
 
 @interface CDWDistrictController : UIViewController
 
+@property (nonatomic, strong) NSArray *districts;
+
 @end

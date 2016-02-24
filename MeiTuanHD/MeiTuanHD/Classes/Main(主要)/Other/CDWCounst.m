@@ -8,3 +8,6 @@
 
 #import "CDWCounst.h"
 
+NSString *const CDWCityDidChangeNotification = @"cityDidChangeNotification";
+
+NSString *const CDWcityNamekey = @"cityName";

@@ -14,7 +14,15 @@
 #else
 #define NSLog(...)
 #endif
-
+/**颜色*/
 #define CDWColor(r, g, b) [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:1]
-
+/**主要显示颜色*/
 #define CDWMainColor CDWColor(230, 230, 230)
+/**通知中心*/
+#define CDWNotificationCenter [NSNotificationCenter defaultCenter]
+
+extern NSString *const CDWCityDidChangeNotification;
+
+
+
+extern NSString *const CDWcityNamekey;

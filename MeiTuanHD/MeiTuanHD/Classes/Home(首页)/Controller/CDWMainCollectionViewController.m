@@ -10,6 +10,7 @@
 #import "CDWNavTopView.h"
 #import "CDWCategoryController.h"
 #import "CDWDistrictController.h"
+#import "CDWCityModel.h"
 
 @interface CDWMainCollectionViewController ()
 
@@ -17,9 +18,21 @@
 @property (nonatomic, weak) UIBarButtonItem *districtItem;
 @property (nonatomic, weak) UIBarButtonItem *sortItem;
 
+@property (nonatomic, strong) NSArray *cityArray;
+@property (nonatomic, copy) NSString *selectedCityName;
+
 @end
 
 @implementation CDWMainCollectionViewController
+
+- (NSArray *)cityArray {
+    
+    if (_cityArray == nil) {
+        _cityArray = [CDWCityModel mj_objectArrayWithFilename:@"cities.plist"];
+    }
+    return _cityArray;
+
+}
 
 - (instancetype)init
 {
@@ -37,7 +50,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+   
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -49,6 +62,15 @@ static NSString * const reuseIdentifier = @"Cell";
     [self setNavigationRight];
     
     // Do any additional setup after loading the view.
+    [CDWNotificationCenter addObserver:self selector:@selector(cityDidChangeNotification:) name:CDWCityDidChangeNotification object:nil];
+   ;
+}
+
+// MARK: --通知的实现
+#pragma mark --城市选择通知;
+- (void)cityDidChangeNotification:(NSNotification *)notification {
+    
+    self.selectedCityName = notification.userInfo[CDWcityNamekey];
 }
 
 #pragma mark --导航栏左边按钮的是创建
@@ -109,7 +131,16 @@ static NSString * const reuseIdentifier = @"Cell";
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
-    UIPopoverController *districtPopoverC = [[UIPopoverController alloc] initWithContentViewController:[[CDWDistrictController alloc] init]];
+    CDWDistrictController *districtVc = [[CDWDistrictController alloc] init];
+    
+    for (CDWCityModel *cityModel in self.cityArray) {
+        if ([cityModel.name isEqualToString:self.selectedCityName]) {
+            
+            districtVc.districts = cityModel.districts;
+        }
+    }
+
+    UIPopoverController *districtPopoverC = [[UIPopoverController alloc] initWithContentViewController:districtVc];
     
     [districtPopoverC presentPopoverFromBarButtonItem:self.districtItem permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 }
