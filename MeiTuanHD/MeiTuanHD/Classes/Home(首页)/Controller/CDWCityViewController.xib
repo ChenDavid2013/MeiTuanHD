@@ -29,7 +29,7 @@
                     <rect key="frame" x="10" y="10" width="580" height="44"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
-                        <outlet property="delegate" destination="-1" id="Bcy-lb-TFQ"/>
+                        <outlet property="delegate" destination="-1" id="WAv-kR-gPv"/>
                     </connections>
                 </searchBar>
             </subviews>
