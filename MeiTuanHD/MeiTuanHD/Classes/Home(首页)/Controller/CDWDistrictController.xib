@@ -18,7 +18,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mk5-QQ-3HD">
                     <rect key="frame" x="0.0" y="0.0" width="305" height="44"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_filter_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="0bJ-Sb-i3K">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon_filter_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="0bJ-Sb-i3K">
                             <rect key="frame" x="279" y="14" width="16" height="16"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPN-h3-1wT">
@@ -26,7 +26,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="切换城市" image="btn_changeCity">
-                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <state key="highlighted" image="btn_changeCity_selected"/>
                             <connections>
@@ -34,7 +34,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="HPN-h3-1wT" secondAttribute="trailing" id="EUB-cw-JXp"/>
                         <constraint firstItem="HPN-h3-1wT" firstAttribute="top" secondItem="mk5-QQ-3HD" secondAttribute="top" id="GC2-PA-9FB"/>
@@ -46,7 +46,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="0.11315091870000001" blue="0.82420012600000003" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="mk5-QQ-3HD" secondAttribute="trailing" id="Ewf-wB-QHV"/>
                 <constraint firstItem="mk5-QQ-3HD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="eKD-tj-dID"/>

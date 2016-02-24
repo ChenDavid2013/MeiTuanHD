@@ -105,7 +105,7 @@ static NSString *ID = @"city";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    [CDWNotificationCenter postNotificationName:CDWCityDidChangeNotification object:nil userInfo:@{CDWcityNamekey : [self.cityGroupArray[indexPath.section] cities][indexPath.row]}];
+    [CDWNotificationCenter postNotificationName:CDWCityDidChangeNotification object:nil userInfo:@{CDWCityNamekey : [self.cityGroupArray[indexPath.section] cities][indexPath.row]}];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

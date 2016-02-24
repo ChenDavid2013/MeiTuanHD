@@ -22,7 +22,15 @@
 #define CDWNotificationCenter [NSNotificationCenter defaultCenter]
 
 extern NSString *const CDWCityDidChangeNotification;
+extern NSString *const CDWSortNotification;
+extern NSString *const CDWCategoryViewNotification;
+extern NSString *const CDWDistrictViewNotification;
 
 
 
-extern NSString *const CDWcityNamekey;
+extern NSString *const CDWCityNamekey;
+extern NSString *const CDWSortKey;
+extern NSString *const CDWCategoryModelKey;
+extern NSString *const CDWCategorySubtitleKey;
+extern NSString *const CDWDistrictModelKey;
+extern NSString *const CDWDistrictSubDistrictKey;

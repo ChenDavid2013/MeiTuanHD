@@ -9,5 +9,15 @@
 #import "CDWCounst.h"
 
 NSString *const CDWCityDidChangeNotification = @"cityDidChangeNotification";
+NSString *const CDWSortNotification = @"sortNotification";
+NSString *const CDWCategoryViewNotification = @"categoryViewNotification";
+NSString *const CDWDistrictViewNotification = @"districtViewNotification";
 
-NSString *const CDWcityNamekey = @"cityName";
+
+
+NSString *const CDWCityNamekey = @"cityNameKey";
+NSString *const CDWSortKey = @"sortKey";
+NSString *const CDWCategoryModelKey = @"categoryModelKey";
+NSString *const CDWCategorySubtitleKey = @"categorySubtitleKey";
+NSString *const CDWDistrictModelKey = @"districtModelKey";
+NSString *const CDWDistrictSubDistrictKey = @"districtSubDistrictKey";

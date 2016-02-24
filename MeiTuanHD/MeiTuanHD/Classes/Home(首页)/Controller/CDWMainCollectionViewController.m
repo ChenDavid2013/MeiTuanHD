@@ -11,6 +11,8 @@
 #import "CDWCategoryController.h"
 #import "CDWDistrictController.h"
 #import "CDWCityModel.h"
+#import "CDWSortViewController.h"
+#import "CDWSortModel.h"
 
 @interface CDWMainCollectionViewController ()
 
@@ -63,14 +65,40 @@ static NSString * const reuseIdentifier = @"Cell";
     
     // Do any additional setup after loading the view.
     [CDWNotificationCenter addObserver:self selector:@selector(cityDidChangeNotification:) name:CDWCityDidChangeNotification object:nil];
-   ;
+    [CDWNotificationCenter addObserver:self selector:@selector(sortDidChangeNotification:) name:CDWSortNotification object:nil];
+    [CDWNotificationCenter addObserver:self selector:@selector(categoryChoosedNotification:) name:CDWCategoryViewNotification object:nil];
+    [CDWNotificationCenter addObserver:self selector:@selector(districtChoosedNotification:) name:CDWDistrictViewNotification object:nil];
 }
 
 // MARK: --通知的实现
 #pragma mark --城市选择通知;
 - (void)cityDidChangeNotification:(NSNotification *)notification {
     
-    self.selectedCityName = notification.userInfo[CDWcityNamekey];
+    self.selectedCityName = notification.userInfo[CDWCityNamekey];
+}
+#pragma mark --排序通知
+- (void)sortDidChangeNotification:(NSNotification *)notification {
+    
+    CDWSortModel *sortModel = notification.userInfo[CDWSortKey];
+    
+    NSLog(@"%@",sortModel.value);
+}
+#pragma mark --分类选取通知
+- (void)categoryChoosedNotification:(NSNotification *)notification {
+    
+    NSLog(@"%@",notification.userInfo[CDWCategoryModelKey]);
+    NSLog(@"%@",notification.userInfo[CDWCategorySubtitleKey]);
+}
+#pragma mark -区域选取通知
+- (void)districtChoosedNotification:(NSNotification *)notification {
+    
+    NSLog(@"%@",notification.userInfo[CDWDistrictModelKey]);
+    NSLog(@"%@",notification.userInfo[CDWDistrictSubDistrictKey]);
+}
+
+- (void)dealloc {
+    
+    [CDWNotificationCenter removeObserver:self];
 }
 
 #pragma mark --导航栏左边按钮的是创建
@@ -90,7 +118,9 @@ static NSString * const reuseIdentifier = @"Cell";
     
     CDWNavTopView *sortView = [CDWNavTopView navTopView];
     UIBarButtonItem *sortItem = [[UIBarButtonItem alloc] initWithCustomView:sortView];
-
+    self.sortItem = sortItem;
+    [sortView addTarget:self andAction:@selector(sortItemClick)];
+    
     self.navigationItem.leftBarButtonItems = @[meiTuanItem, categoryItem, districtItem, sortItem];
 }
 
@@ -143,6 +173,17 @@ static NSString * const reuseIdentifier = @"Cell";
     UIPopoverController *districtPopoverC = [[UIPopoverController alloc] initWithContentViewController:districtVc];
     
     [districtPopoverC presentPopoverFromBarButtonItem:self.districtItem permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+}
+#pragma mark --排序点击事件
+- (void)sortItemClick {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    CDWSortViewController *sortVC = [[CDWSortViewController alloc] init];
+    
+    UIPopoverController *sortPopoverVC = [[UIPopoverController alloc] initWithContentViewController:sortVC];
+    
+    [sortPopoverVC presentPopoverFromBarButtonItem:self.sortItem permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 }
 
 @end

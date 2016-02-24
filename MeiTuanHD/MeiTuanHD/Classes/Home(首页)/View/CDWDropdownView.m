@@ -34,7 +34,7 @@ static NSString *rightCell = @"rightCell";
     
     self.autoresizingMask = UIViewAutoresizingNone;
     
-//    [self.leftTableView registerClass:[CDWLeftTableViewCell class] forCellReuseIdentifier:leftCell];
+    //    [self.leftTableView registerClass:[CDWLeftTableViewCell class] forCellReuseIdentifier:leftCell];
     [self.rightTableView registerClass:[CDWRightTableViewCell class] forCellReuseIdentifier:rightCell];
 }
 // MARK: --tableView的数据源代理方法的实现;
@@ -89,7 +89,7 @@ static NSString *rightCell = @"rightCell";
             cell.textLabel.text = self.selectedCategoryModel.subcategories[indexPath.row];
             
         }
-
+        
     }else {
         
         if (tableView == self.leftTableView) {
@@ -125,25 +125,45 @@ static NSString *rightCell = @"rightCell";
             
             self.selectedCategoryModel = self.categoryArray[indexPath.row];
             
-            [self.rightTableView reloadData];
+            if (!self.selectedCategoryModel.subcategories) {
+                [CDWNotificationCenter postNotificationName:CDWCategoryViewNotification object:nil userInfo:@{CDWCategoryModelKey : self.selectedCategoryModel}];
+            }
             
         }else {
             
-            NSLog(@"%@",self.selectedCategoryModel.subcategories[indexPath.row]);
+//            NSLog(@"%@",self.selectedCategoryModel.subcategories[indexPath.row]);
+            [CDWNotificationCenter postNotificationName:CDWCategoryViewNotification
+                                                 object:nil
+                                               userInfo:@{
+                                                          CDWCategoryModelKey : self.selectedCategoryModel,
+                                                          CDWCategorySubtitleKey : self.selectedCategoryModel.subcategories[indexPath.row]
+                                                          }];
+            
         }
-
+        
     }else {
         
         if (tableView == self.leftTableView) {
             
             self.selectedDistrictModel = self.districtArray[indexPath.row];
             
-            [self.rightTableView reloadData];
+            if (!self.selectedDistrictModel.subdistricts) {
+                [CDWNotificationCenter postNotificationName:CDWDistrictViewNotification object:nil userInfo:@{CDWDistrictModelKey : self.selectedDistrictModel}];
+            }
         }else {
             
-            NSLog(@"%@",self.selectedDistrictModel.subdistricts[indexPath.row]);
+//            NSLog(@"%@",self.selectedDistrictModel.subdistricts[indexPath.row]);
+            [CDWNotificationCenter postNotificationName:CDWDistrictViewNotification
+                                                 object:nil
+                                               userInfo:@{
+                                                          CDWDistrictModelKey : self.selectedDistrictModel,
+                                                          CDWDistrictSubDistrictKey : self.selectedDistrictModel.subdistricts[indexPath.row]
+                                                          }];
+            
         }
     }
+    
+    [self.rightTableView reloadData];
 }
 
 @end
