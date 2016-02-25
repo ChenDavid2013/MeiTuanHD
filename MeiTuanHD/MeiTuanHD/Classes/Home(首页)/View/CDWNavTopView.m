@@ -10,6 +10,8 @@
 
 @interface CDWNavTopView ()
 @property (weak, nonatomic) IBOutlet UIButton *button;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *subtitleLabel;
 
 @end
 
@@ -31,6 +33,20 @@
 - (void)addTarget:(id)target andAction:(SEL)action {
     
     [self.button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)setTitle:(NSString *)title {
+    
+    self.titleLabel.text = title;
+}
+- (void)setSubtitle:(NSString *)subtitle {
+
+    self.subtitleLabel.text = subtitle;
+}
+- (void)setButtonWithIcon:(NSString *)icon andHLIcon:(NSString *)HLIcon {
+    
+    [self.button setImage:[UIImage imageNamed:icon] forState:UIControlStateNormal];
+    [self.button setImage:[UIImage imageNamed:HLIcon] forState:UIControlStateHighlighted];
 }
 
 @end

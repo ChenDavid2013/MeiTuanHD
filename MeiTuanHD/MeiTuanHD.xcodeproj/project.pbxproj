@@ -15,6 +15,10 @@
 		1900F1931C7AD7B100129ECC /* cityGroups.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1900F18F1C7AD7B100129ECC /* cityGroups.plist */; };
 		1900F1941C7AD7B100129ECC /* sorts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1900F1901C7AD7B100129ECC /* sorts.plist */; };
 		1900F1981C7ADCE800129ECC /* CDWCounst.m in Sources */ = {isa = PBXBuildFile; fileRef = 1900F1971C7ADCE800129ECC /* CDWCounst.m */; };
+		196D475C1C7DFB63009782AD /* CDWDealCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 196D475A1C7DFB63009782AD /* CDWDealCell.m */; };
+		196D475D1C7DFB63009782AD /* CDWDealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 196D475B1C7DFB63009782AD /* CDWDealCell.xib */; };
+		196D47641C7E0D35009782AD /* DPAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 196D47601C7E0D35009782AD /* DPAPI.m */; };
+		196D47651C7E0D35009782AD /* DPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 196D47631C7E0D35009782AD /* DPRequest.m */; };
 		198632E81C79A280009EFEA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 198632E71C79A280009EFEA5 /* main.m */; };
 		198632F31C79A280009EFEA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 198632F21C79A280009EFEA5 /* Assets.xcassets */; };
 		198632F61C79A280009EFEA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198632F41C79A280009EFEA5 /* LaunchScreen.storyboard */; };
@@ -56,6 +60,14 @@
 		1900F1951C7ADC6800129ECC /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		1900F1961C7ADCE700129ECC /* CDWCounst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDWCounst.h; sourceTree = "<group>"; };
 		1900F1971C7ADCE800129ECC /* CDWCounst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDWCounst.m; sourceTree = "<group>"; };
+		196D47591C7DFB63009782AD /* CDWDealCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDWDealCell.h; sourceTree = "<group>"; };
+		196D475A1C7DFB63009782AD /* CDWDealCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDWDealCell.m; sourceTree = "<group>"; };
+		196D475B1C7DFB63009782AD /* CDWDealCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDWDealCell.xib; sourceTree = "<group>"; };
+		196D475F1C7E0D35009782AD /* DPAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPAPI.h; sourceTree = "<group>"; };
+		196D47601C7E0D35009782AD /* DPAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPAPI.m; sourceTree = "<group>"; };
+		196D47611C7E0D35009782AD /* DPConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPConstants.h; sourceTree = "<group>"; };
+		196D47621C7E0D35009782AD /* DPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPRequest.h; sourceTree = "<group>"; };
+		196D47631C7E0D35009782AD /* DPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPRequest.m; sourceTree = "<group>"; };
 		198632E31C79A280009EFEA5 /* MeiTuanHD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeiTuanHD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		198632E71C79A280009EFEA5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		198632F21C79A280009EFEA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -173,16 +185,19 @@
 		1900F17C1C7AD40A00129ECC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				19DE90531C7B608A00C1E4EF /* CDWDropdownView.xib */,
+				196D47591C7DFB63009782AD /* CDWDealCell.h */,
+				196D475A1C7DFB63009782AD /* CDWDealCell.m */,
+				196D475B1C7DFB63009782AD /* CDWDealCell.xib */,
 				19DE90551C7B60AF00C1E4EF /* CDWDropdownView.h */,
 				19DE90561C7B60AF00C1E4EF /* CDWDropdownView.m */,
+				19DE90531C7B608A00C1E4EF /* CDWDropdownView.xib */,
 				19DE905B1C7B718600C1E4EF /* CDWLeftTableViewCell.h */,
 				19DE905C1C7B718600C1E4EF /* CDWLeftTableViewCell.m */,
 				19DE905E1C7B719600C1E4EF /* CDWRightTableViewCell.h */,
 				19DE905F1C7B719600C1E4EF /* CDWRightTableViewCell.m */,
-				19DE904B1C7B4DE500C1E4EF /* CDWNavTopView.xib */,
 				19DE904D1C7B518100C1E4EF /* CDWNavTopView.h */,
 				19DE904E1C7B518100C1E4EF /* CDWNavTopView.m */,
+				19DE904B1C7B4DE500C1E4EF /* CDWNavTopView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -222,6 +237,7 @@
 		1900F1801C7AD40A00129ECC /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				196D475E1C7E0D35009782AD /* dianpingapi */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -253,6 +269,18 @@
 				1900F1901C7AD7B100129ECC /* sorts.plist */,
 			);
 			path = Plist;
+			sourceTree = "<group>";
+		};
+		196D475E1C7E0D35009782AD /* dianpingapi */ = {
+			isa = PBXGroup;
+			children = (
+				196D475F1C7E0D35009782AD /* DPAPI.h */,
+				196D47601C7E0D35009782AD /* DPAPI.m */,
+				196D47611C7E0D35009782AD /* DPConstants.h */,
+				196D47621C7E0D35009782AD /* DPRequest.h */,
+				196D47631C7E0D35009782AD /* DPRequest.m */,
+			);
+			path = dianpingapi;
 			sourceTree = "<group>";
 		};
 		198632DA1C79A280009EFEA5 = {
@@ -376,6 +404,7 @@
 			files = (
 				19D49ADE1C7C80D4003A886D /* CDWCityViewController.xib in Resources */,
 				1900F1941C7AD7B100129ECC /* sorts.plist in Resources */,
+				196D475D1C7DFB63009782AD /* CDWDealCell.xib in Resources */,
 				1900F1931C7AD7B100129ECC /* cityGroups.plist in Resources */,
 				19DE90541C7B608A00C1E4EF /* CDWDropdownView.xib in Resources */,
 				198632F61C79A280009EFEA5 /* LaunchScreen.storyboard in Resources */,
@@ -451,6 +480,7 @@
 				19DE90471C7AE19500C1E4EF /* UIView+HMCategory.m in Sources */,
 				19DE904A1C7AE1D500C1E4EF /* UIBarButtonItem+CDWCategory.m in Sources */,
 				19D49AD31C7C7138003A886D /* CDWDistrictController.m in Sources */,
+				196D47641C7E0D35009782AD /* DPAPI.m in Sources */,
 				19DE904F1C7B518100C1E4EF /* CDWNavTopView.m in Sources */,
 				1900F1851C7AD40A00129ECC /* AppDelegate.m in Sources */,
 				19C5E6151C7DA4F80073700D /* CDWSortViewController.m in Sources */,
@@ -460,6 +490,8 @@
 				19C5E60C1C7D6DC80073700D /* CDWCitySearchViewController.m in Sources */,
 				1900F18B1C7AD47600129ECC /* CDWMainCollectionViewController.m in Sources */,
 				19D49ADD1C7C80D4003A886D /* CDWCityViewController.m in Sources */,
+				196D47651C7E0D35009782AD /* DPRequest.m in Sources */,
+				196D475C1C7DFB63009782AD /* CDWDealCell.m in Sources */,
 				19C5E6181C7DA5F70073700D /* CDWSortModel.m in Sources */,
 				1900F1881C7AD45800129ECC /* CDWNavigationViewController.m in Sources */,
 				19C5E60F1C7D7B410073700D /* CDWCityModel.m in Sources */,

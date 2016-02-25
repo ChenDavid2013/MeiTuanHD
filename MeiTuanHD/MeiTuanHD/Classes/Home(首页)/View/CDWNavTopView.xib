@@ -13,25 +13,22 @@
             <subviews>
                 <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bUB-0K-xab" customClass="CDWNavTopView">
                     <rect key="frame" x="10" y="0.0" width="1" height="40"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="S68-gW-riv"/>
                         <constraint firstAttribute="width" constant="1" id="wfF-1S-1Yj"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuD-2Z-qFy">
-                    <rect key="frame" x="71" y="0.0" width="30" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="21" id="bX2-7Y-ROa"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuD-2Z-qFy">
+                    <rect key="frame" x="61" y="0.0" width="99" height="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.58093475877192968" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="子标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uat-gJ-dr1">
-                    <rect key="frame" x="71" y="25" width="36" height="14.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="61" y="22" width="99" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="0.5795213130482455" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgw-4h-2ep">
@@ -42,24 +39,28 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="CuD-2Z-qFy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7fg-VM-VgP"/>
                 <constraint firstAttribute="trailing" secondItem="pgw-4h-2ep" secondAttribute="trailing" id="8dI-mW-DPP"/>
+                <constraint firstItem="CuD-2Z-qFy" firstAttribute="leading" secondItem="bUB-0K-xab" secondAttribute="trailing" constant="50" id="KiD-oK-E4b"/>
                 <constraint firstAttribute="bottom" secondItem="pgw-4h-2ep" secondAttribute="bottom" id="Nhj-vm-dkk"/>
                 <constraint firstItem="bUB-0K-xab" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OVf-05-QTS"/>
-                <constraint firstItem="uat-gJ-dr1" firstAttribute="leading" secondItem="bUB-0K-xab" secondAttribute="trailing" constant="60" id="SAV-oV-yPi"/>
-                <constraint firstItem="CuD-2Z-qFy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ca8-VV-c7W"/>
+                <constraint firstAttribute="bottom" secondItem="uat-gJ-dr1" secondAttribute="bottom" constant="2" id="Vzj-Q8-M1S"/>
                 <constraint firstItem="pgw-4h-2ep" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hf3-xt-p1m"/>
-                <constraint firstItem="CuD-2Z-qFy" firstAttribute="leading" secondItem="bUB-0K-xab" secondAttribute="trailing" constant="60" id="hvV-VO-P6X"/>
-                <constraint firstAttribute="bottom" secondItem="uat-gJ-dr1" secondAttribute="bottom" id="pk5-4l-D9Y"/>
+                <constraint firstAttribute="trailing" secondItem="uat-gJ-dr1" secondAttribute="trailing" id="lPi-sM-qOv"/>
+                <constraint firstAttribute="trailing" secondItem="CuD-2Z-qFy" secondAttribute="trailing" id="lhP-xS-eWT"/>
+                <constraint firstItem="uat-gJ-dr1" firstAttribute="top" secondItem="CuD-2Z-qFy" secondAttribute="bottom" id="lr4-OH-ZxK"/>
                 <constraint firstItem="bUB-0K-xab" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="vCp-bL-8UZ"/>
                 <constraint firstItem="pgw-4h-2ep" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xhE-D9-q90"/>
+                <constraint firstItem="CuD-2Z-qFy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="z2o-Um-yDO"/>
+                <constraint firstItem="uat-gJ-dr1" firstAttribute="leading" secondItem="bUB-0K-xab" secondAttribute="trailing" constant="50" id="zas-5b-Kwv"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="button" destination="pgw-4h-2ep" id="LOI-ZF-47V"/>
+                <outlet property="subtitleLabel" destination="uat-gJ-dr1" id="HkN-Ts-TNs"/>
+                <outlet property="titleLabel" destination="CuD-2Z-qFy" id="uqn-pR-KRq"/>
             </connections>
-            <point key="canvasLocation" x="264" y="117"/>
+            <point key="canvasLocation" x="400" y="150"/>
         </view>
     </objects>
     <resources>

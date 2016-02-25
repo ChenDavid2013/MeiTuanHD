@@ -21,6 +21,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.view.backgroundColor = CDWMainColor;
+    
     NSArray *sortArray = [CDWSortModel mj_objectArrayWithFilename:@"sorts.plist"];
     
     self.sortArray = sortArray;

@@ -14,4 +14,8 @@
 
 - (void)addTarget:(id)target andAction:(SEL)action;
 
+- (void)setTitle:(NSString *)title;
+- (void)setSubtitle:(NSString *)subtitle;
+- (void)setButtonWithIcon:(NSString *)icon andHLIcon:(NSString *)HLIcon;
+
 @end
