@@ -15,10 +15,12 @@
 		1900F1931C7AD7B100129ECC /* cityGroups.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1900F18F1C7AD7B100129ECC /* cityGroups.plist */; };
 		1900F1941C7AD7B100129ECC /* sorts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1900F1901C7AD7B100129ECC /* sorts.plist */; };
 		1900F1981C7ADCE800129ECC /* CDWCounst.m in Sources */ = {isa = PBXBuildFile; fileRef = 1900F1971C7ADCE800129ECC /* CDWCounst.m */; };
+		1913FC151C7F1B4100D29313 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 1913FC141C7F1B4100D29313 /* Foundation+Log.m */; };
 		196D475C1C7DFB63009782AD /* CDWDealCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 196D475A1C7DFB63009782AD /* CDWDealCell.m */; };
 		196D475D1C7DFB63009782AD /* CDWDealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 196D475B1C7DFB63009782AD /* CDWDealCell.xib */; };
 		196D47641C7E0D35009782AD /* DPAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 196D47601C7E0D35009782AD /* DPAPI.m */; };
 		196D47651C7E0D35009782AD /* DPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 196D47631C7E0D35009782AD /* DPRequest.m */; };
+		1984B3D01C80688A007C2E06 /* CDWDealModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1984B3CF1C80688A007C2E06 /* CDWDealModel.m */; };
 		198632E81C79A280009EFEA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 198632E71C79A280009EFEA5 /* main.m */; };
 		198632F31C79A280009EFEA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 198632F21C79A280009EFEA5 /* Assets.xcassets */; };
 		198632F61C79A280009EFEA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198632F41C79A280009EFEA5 /* LaunchScreen.storyboard */; };
@@ -60,6 +62,7 @@
 		1900F1951C7ADC6800129ECC /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		1900F1961C7ADCE700129ECC /* CDWCounst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDWCounst.h; sourceTree = "<group>"; };
 		1900F1971C7ADCE800129ECC /* CDWCounst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDWCounst.m; sourceTree = "<group>"; };
+		1913FC141C7F1B4100D29313 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		196D47591C7DFB63009782AD /* CDWDealCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDWDealCell.h; sourceTree = "<group>"; };
 		196D475A1C7DFB63009782AD /* CDWDealCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDWDealCell.m; sourceTree = "<group>"; };
 		196D475B1C7DFB63009782AD /* CDWDealCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDWDealCell.xib; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 		196D47611C7E0D35009782AD /* DPConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPConstants.h; sourceTree = "<group>"; };
 		196D47621C7E0D35009782AD /* DPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPRequest.h; sourceTree = "<group>"; };
 		196D47631C7E0D35009782AD /* DPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPRequest.m; sourceTree = "<group>"; };
+		1984B3CE1C80688A007C2E06 /* CDWDealModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDWDealModel.h; sourceTree = "<group>"; };
+		1984B3CF1C80688A007C2E06 /* CDWDealModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDWDealModel.m; sourceTree = "<group>"; };
 		198632E31C79A280009EFEA5 /* MeiTuanHD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeiTuanHD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		198632E71C79A280009EFEA5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		198632F21C79A280009EFEA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -178,6 +183,8 @@
 				19C5E6111C7D7B5E0073700D /* CDWDistrictModel.m */,
 				19C5E6161C7DA5F70073700D /* CDWSortModel.h */,
 				19C5E6171C7DA5F70073700D /* CDWSortModel.m */,
+				1984B3CE1C80688A007C2E06 /* CDWDealModel.h */,
+				1984B3CF1C80688A007C2E06 /* CDWDealModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -249,6 +256,7 @@
 				1900F1831C7AD40A00129ECC /* AppDelegate.m */,
 				1900F1961C7ADCE700129ECC /* CDWCounst.h */,
 				1900F1971C7ADCE800129ECC /* CDWCounst.m */,
+				1913FC141C7F1B4100D29313 /* Foundation+Log.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -472,8 +480,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				19C5E6121C7D7B5E0073700D /* CDWDistrictModel.m in Sources */,
+				1913FC151C7F1B4100D29313 /* Foundation+Log.m in Sources */,
 				19DE90601C7B719600C1E4EF /* CDWRightTableViewCell.m in Sources */,
 				19DE90521C7B5D8A00C1E4EF /* CDWCategoryController.m in Sources */,
+				1984B3D01C80688A007C2E06 /* CDWDealModel.m in Sources */,
 				19DE905D1C7B718600C1E4EF /* CDWLeftTableViewCell.m in Sources */,
 				19C5E6091C7D692D0073700D /* CDWCityGroupModel.m in Sources */,
 				1900F1981C7ADCE800129ECC /* CDWCounst.m in Sources */,

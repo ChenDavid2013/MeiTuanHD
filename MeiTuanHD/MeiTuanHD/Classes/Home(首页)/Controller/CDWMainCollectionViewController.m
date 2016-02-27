@@ -15,20 +15,38 @@
 #import "CDWSortModel.h"
 #import "CDWCategoryModel.h"
 #import "CDWDistrictModel.h"
+#import "CDWDealModel.h"
+#import "CDWDealCell.h"
 
-@interface CDWMainCollectionViewController ()
+@interface CDWMainCollectionViewController ()<DPRequestDelegate>
 
 @property (nonatomic, weak) UIBarButtonItem *categoryItem;
 @property (nonatomic, weak) UIBarButtonItem *districtItem;
 @property (nonatomic, weak) UIBarButtonItem *sortItem;
-
-@property (nonatomic, strong) NSArray *cityArray;
+/**选中的城市*/
 @property (nonatomic, copy) NSString *selectedCityName;
+/**选中的排序方式*/
+@property (nonatomic, strong) NSNumber *selectedSortValue;
+/**选中的分类*/
+@property (nonatomic, copy) NSString *selectedCategory;
+/**选中的区域*/
+@property (nonatomic, copy) NSString *selectedDistrict;
+/**货单模型数组*/
+@property (nonatomic, strong) NSMutableArray *dealArray;
+/**城市模型数组*/
+@property (nonatomic, strong) NSArray *cityArray;
 
-@property (nonatomic, strong) NSArray *dealArray;
 @end
 
 @implementation CDWMainCollectionViewController
+
+- (NSMutableArray *)dealArray {
+    if (_dealArray == nil) {
+        _dealArray = [[NSMutableArray alloc] init];
+    }
+    return _dealArray;
+
+}
 
 - (NSArray *)cityArray {
     
@@ -39,8 +57,7 @@
 
 }
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         
@@ -75,6 +92,9 @@ static NSString * const reuseIdentifier = @"homeCell";
     [CDWNotificationCenter addObserver:self selector:@selector(districtChoosedNotification:) name:CDWDistrictViewNotification object:nil];
     
     [self viewWillTransitionToSize:[UIScreen mainScreen].bounds.size withTransitionCoordinator:self.transitionCoordinator];
+    
+   
+    [self loadData];
 }
 
 // MARK: --横竖屏适配
@@ -102,6 +122,7 @@ static NSString * const reuseIdentifier = @"homeCell";
     [districtView setTitle:[NSString stringWithFormat:@"%@-全部", self.selectedCityName]];
     [districtView setSubtitle:@""];
  
+    [self loadData];
 }
 #pragma mark --排序通知
 - (void)sortDidChangeNotification:(NSNotification *)notification {
@@ -112,8 +133,12 @@ static NSString * const reuseIdentifier = @"homeCell";
     
     [sortView setSubtitle:sortModel.label];
     
+    self.selectedSortValue = sortModel.value;
+    
     NSLog(@"%@",sortModel.value);
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [self loadData];
 }
 #pragma mark --分类选取通知
 - (void)categoryChoosedNotification:(NSNotification *)notification {
@@ -124,10 +149,11 @@ static NSString * const reuseIdentifier = @"homeCell";
     [categoryView setTitle:categoryModel.name];
     [categoryView setButtonWithIcon:categoryModel.icon andHLIcon:categoryModel.highlighted_icon];
     [categoryView setSubtitle:notification.userInfo[CDWCategorySubtitleKey]];
-    NSLog(@"%@",notification.userInfo[CDWCategoryModelKey]);
-    NSLog(@"%@",notification.userInfo[CDWCategorySubtitleKey]);
+    //在给选中的分类赋值前  先判断是否右边的有值,和左边的是否等于"全部分类",  当判断完成后还要判断右边的是否是"全部"
+    self.selectedCategory = [(categoryModel.subcategories == nil || [categoryModel.name isEqualToString: @"全部分类"] ? nil : notification.userInfo[CDWCategorySubtitleKey]) isEqualToString:@"全部"] ? categoryModel.name : notification.userInfo[CDWCategorySubtitleKey];
     
     [self dismissViewControllerAnimated:YES completion:nil];
+    [self loadData];
 }
 #pragma mark -区域选取通知
 - (void)districtChoosedNotification:(NSNotification *)notification {
@@ -137,10 +163,14 @@ static NSString * const reuseIdentifier = @"homeCell";
     
     [districtView setTitle:[NSString stringWithFormat:@"%@-%@", self.selectedCityName, districtModel.name]];
     [districtView setSubtitle:notification.userInfo[CDWDistrictSubDistrictKey]];
+    //在给选中的区域赋值前  先判断是否右边的有值,和左边的是否等于"全部",  当判断完成后还要判断右边的是否是"全部"
+    self.selectedDistrict = [(districtModel.subdistricts == nil || [districtModel.name isEqualToString:@"全部"] ? nil : notification.userInfo[CDWDistrictSubDistrictKey]) isEqualToString:@"全部"] ? districtModel.name : notification.userInfo[CDWDistrictSubDistrictKey];
     
-    NSLog(@"%@",notification.userInfo[CDWDistrictModelKey]);
-    NSLog(@"%@",notification.userInfo[CDWDistrictSubDistrictKey]);
+    NSLog(@"%@- %@",districtModel.name, notification.userInfo[CDWDistrictSubDistrictKey]);
+    
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [self loadData];
 }
 
 - (void)dealloc {
@@ -153,11 +183,12 @@ static NSString * const reuseIdentifier = @"homeCell";
 - (void)setNavigationLeft {
     UIBarButtonItem *meiTuanItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_meituan_logo"] style:UIBarButtonItemStyleDone target:nil action:nil];
     meiTuanItem.enabled = NO;
-    
+   
     CDWNavTopView *categoryView = [CDWNavTopView navTopView];
     [categoryView setTitle:@"全部分类"];
     [categoryView setSubtitle:@""];
     [categoryView setButtonWithIcon:@"icon_category_-1" andHLIcon:@"icon_filter_category_highlighted_-1"];
+    self.selectedCategory = nil;
     UIBarButtonItem *categoryItem = [[UIBarButtonItem alloc] initWithCustomView:categoryView];
     self.categoryItem = categoryItem;
     [categoryView addTarget:self andAction:@selector(categoryItemClick)];
@@ -166,6 +197,8 @@ static NSString * const reuseIdentifier = @"homeCell";
     [districtView setTitle:[NSString stringWithFormat:@"北京-全部"]];
     [districtView setButtonWithIcon:@"icon_district" andHLIcon:@"icon_district_highlighted"];
     [districtView setSubtitle:@""];
+    self.selectedCityName = @"北京";
+    self.selectedDistrict = nil;
     UIBarButtonItem *districtItem = [[UIBarButtonItem alloc] initWithCustomView:districtView];
     self.districtItem = districtItem;
     [districtView addTarget:self andAction:@selector(districtItemClick)];
@@ -174,6 +207,7 @@ static NSString * const reuseIdentifier = @"homeCell";
     [sortView setTitle:@"排序"];
     [sortView setSubtitle:@"默认排序"];
     [sortView setButtonWithIcon:@"icon_sort" andHLIcon:@"icon_sort_highlighted"];
+    self.selectedSortValue = @(1);
     UIBarButtonItem *sortItem = [[UIBarButtonItem alloc] initWithCustomView:sortView];
     self.sortItem = sortItem;
     [sortView addTarget:self andAction:@selector(sortItemClick)];
@@ -253,20 +287,40 @@ static NSString * const reuseIdentifier = @"homeCell";
     
     DPAPI *dpAPI = [[DPAPI alloc] init];
     
-    [dpAPI requestWithURL:@"v1/deal/find_deals" params:@{@"city": @"北京"} delegate:self];
-    NSLog (@"失败");
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"city"] = self.selectedCityName;
+    params[@"sort"] = self.selectedSortValue;
+    params[@"category"] = self.selectedCategory;
+    params[@"region"] = self.selectedDistrict;
+    params[@"limit"] = @(10);
+    [dpAPI requestWithURL:@"v1/deal/find_deals" params:params delegate:self];
+ 
 }
 
+- (void)request:(DPRequest *)request didFinishLoadingWithResult:(id)result {
+    
+    [self.dealArray removeAllObjects];
+    
+//    NSLog(@"result:%@",result[@"deals"]);
+    [self.dealArray addObjectsFromArray:[CDWDealModel mj_objectArrayWithKeyValuesArray:result[@"deals"]]];
+    [self.collectionView reloadData];
+}
+
+- (void)request:(DPRequest *)request didFailWithError:(NSError *)error {
+    NSLog(@"error:%@",error);
+}
 // MARK: --collectionView的数据源, 代理方法实现
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 50;
+    return self.dealArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    CDWDealCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    
+    cell.dealModel = self.dealArray[indexPath.item];
     
     return cell;
 }

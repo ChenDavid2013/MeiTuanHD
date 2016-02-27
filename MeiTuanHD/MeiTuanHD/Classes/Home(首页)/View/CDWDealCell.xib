@@ -59,8 +59,8 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已售9999台" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmH-n3-Imu">
-                                <rect key="frame" x="207.5" y="78" width="77.5" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="已售9999台" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmH-n3-Imu">
+                                <rect key="frame" x="209" y="77" width="77.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -96,7 +96,16 @@
                 <constraint firstAttribute="trailing" secondItem="9RN-qt-ico" secondAttribute="trailing" constant="5" id="raS-lT-8YU"/>
                 <constraint firstItem="Ddg-J2-cNT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="xkw-MF-iXx"/>
             </constraints>
-            <point key="canvasLocation" x="279.5" y="246.5"/>
+            <connections>
+                <outlet property="currentPriceLabel" destination="aYi-GT-dRP" id="tES-XO-fD6"/>
+                <outlet property="descLabel" destination="QBV-R4-bS9" id="lhX-0Q-msX"/>
+                <outlet property="icDealNewImgView" destination="dq7-k2-BUg" id="Abe-2t-u8S"/>
+                <outlet property="imgUrlView" destination="Ddg-J2-cNT" id="SXh-A8-2wq"/>
+                <outlet property="listPriceLabel" destination="kRh-Dw-oWm" id="ERd-yc-QXy"/>
+                <outlet property="purchaseCountLabel" destination="VmH-n3-Imu" id="cyF-Lg-x5G"/>
+                <outlet property="titleLabel" destination="AEy-V4-Vgt" id="FTi-Mo-ssR"/>
+            </connections>
+            <point key="canvasLocation" x="210.5" y="184.5"/>
         </collectionViewCell>
     </objects>
     <resources>

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class CDWDealModel;
 
 @interface CDWDealCell : UICollectionViewCell
+
+@property (nonatomic, strong) CDWDealModel *dealModel;
 
 @end
